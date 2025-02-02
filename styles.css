@@ -6,8 +6,7 @@ body {
     line-height: 1.6;
     margin: 0;
     overflow-x: hidden;
-    cursor: url('https://cdn.jsdelivr.net/gh/Chandrakanta1408/Cursors/cursor2.png'), auto;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Dark Mode Styles */
@@ -89,4 +88,38 @@ button.theme-toggle.dark-mode {
 .payment-icons img {
     width: 50px;
     height: 50px;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* For dark mode, customize specific elements that need a darker look */
+body.dark-mode section {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav {
+    background-color: #222;
+}
+
+body.dark-mode nav ul li a {
+    color: #ddd;
+}
+
+body.dark-mode header {
+    color: #ddd;
 }
