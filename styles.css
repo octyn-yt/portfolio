@@ -123,16 +123,29 @@ header img.profile-pic {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* PayPal Link Styling */
+/* PayPal Grid Link Styling */
 .payment-method a {
-    color: #0070ba;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    display: block; /* Ensure the link behaves like a block element */
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit text color from parent */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .payment-method a:hover {
-    color: #00609d;
+    background-color: #f4f7fa; /* Light hover effect */
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.payment-method a h3 {
+    color: #1E90FF;
+}
+
+.payment-method a p {
+    color: #555;
 }
 
 /* Projects Section */
