@@ -9,9 +9,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centers all content horizontally */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    justify-content: flex-start;
     min-height: 100vh;
-    justify-content: flex-start; /* Keeps content starting from the top */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
@@ -79,7 +79,7 @@ h2 {
 /* Grid Layout for Perfect Squares */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensure grid items are equal size */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Items evenly spaced horizontally */
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -88,18 +88,15 @@ h2 {
 }
 
 .grid-item {
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%; /* This ensures the grid items are squares */
+    width: 300px; /* Fixed width for all items */
+    height: 300px; /* Fixed height for all items */
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(30, 144, 255, 0.2); /* Blue shadow */
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
-    overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -135,7 +132,7 @@ h2 {
 .jailbreak-devices,
 .payment-icons {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Same size grid items */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Items evenly spaced horizontally */
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -152,12 +149,12 @@ h2 {
     box-shadow: 0 4px 6px rgba(30, 144, 255, 0.2); /* Blue shadow */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
-    height: 100%;
+    height: 300px; /* Fixed height for all items */
+    width: 300px; /* Fixed width for all items */
 }
 
 .project-item:hover,
