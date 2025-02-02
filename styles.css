@@ -93,22 +93,47 @@ section h2 {
 
 /* Project Section */
 .project-list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project-item {
+    display: block;
     background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-content {
     padding: 20px;
-    border-radius: 8px;
-    width: 45%;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .project-item h3 {
+    font-size: 1.8rem;
     margin-bottom: 15px;
+    color: #333;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #555;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.project-item:hover h3 {
+    color: #00aaff;
 }
 
 /* Payment Section */
