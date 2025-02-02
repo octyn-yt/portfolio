@@ -34,13 +34,13 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-list">
-            <div class="project-item">
+            <div class="project-item" data-project-id="1">
                 <h3>Project Name 1</h3>
-                <p>A brief description of Project 1. <a href="https://github.com/octyn-yt/project1" target="_blank">View on GitHub</a></p>
+                <p>A brief description of Project 1. <button class="view-details">View Details</button></p>
             </div>
-            <div class="project-item">
+            <div class="project-item" data-project-id="2">
                 <h3>Project Name 2</h3>
-                <p>A brief description of Project 2. <a href="https://github.com/octyn-yt/project2" target="_blank">View on GitHub</a></p>
+                <p>A brief description of Project 2. <button class="view-details">View Details</button></p>
             </div>
             <!-- Add more projects here -->
         </div>
@@ -58,12 +58,23 @@
             <li><strong>Job Title 1</strong> - Company Name (Year - Year)</li>
             <li><strong>Job Title 2</strong> - Company Name (Year - Year)</li>
             <li><strong>Freelance Developer</strong> - Various Clients (Year - Present)</li>
-            <!-- Add more experience here -->
         </ul>
     </section>
+
+    <!-- Modal for Project Details -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Project Details</h2>
+            <p id="modal-description"></p>
+            <a id="modal-link" href="#" target="_blank">View Project</a>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 Octyn-YT. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
