@@ -6,7 +6,12 @@ body {
     line-height: 1.6;
     margin: 0;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all content horizontally */
     transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    justify-content: flex-start; /* Keeps content starting from the top */
 }
 
 header {
@@ -14,6 +19,7 @@ header {
     padding: 80px 20px;
     background: #222;
     color: #fff;
+    width: 100%;
 }
 
 header img.profile-pic {
@@ -87,8 +93,12 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(30, 144, 255, 0.2); /* Blue shadow */
     position: relative;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
     overflow: hidden;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -127,6 +137,7 @@ h2 {
     gap: 20px;
     padding: 20px;
     justify-items: center;
+    width: 100%;
 }
 
 .project-item,
@@ -139,6 +150,10 @@ h2 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
     height: 100%;
 }
 
@@ -178,97 +193,27 @@ h2 {
     text-decoration: none;
 }
 
-/* Ensure perfect square layout */
-.project-item,
-.device-item,
-.payment-method {
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%; /* This ensures that the items are square */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Jailbreak Device Section */
-.jailbreak-devices {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-}
-
-.device-item {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(30, 144, 255, 0.2); /* Blue shadow */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.device-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(30, 144, 255, 0.3); /* Blue hover shadow */
-}
-
-.device-item i {
-    font-size: 3rem;
-    color: #1E90FF;
-    margin-bottom: 10px;
-}
-
-.device-item h3 {
-    color: #333;
+/* Join the Discord Button */
+.discord-button {
+    background-color: #7289DA; /* Discord color */
+    color: #fff;
+    padding: 12px 25px;
     font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.device-item p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Payment Methods Section */
-.payment-icons {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-}
-
-.payment-method {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(30, 144, 255, 0.2); /* Blue shadow */
-    text-align: center;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    text-align: center;
 }
 
-.payment-method:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(30, 144, 255, 0.3); /* Blue hover shadow */
+.discord-button:hover {
+    background-color: #5b6eae; /* Darker Discord color on hover */
+    transform: translateY(-2px);
 }
 
-.payment-method i {
-    font-size: 2rem;
-    color: #1E90FF;
-    margin-bottom: 10px;
-}
-
-.payment-method h3 {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.payment-method p {
-    font-size: 1rem;
-    color: #555;
+.discord-button:active {
+    transform: translateY(1px);
 }
 
 /* Contact Icons */
