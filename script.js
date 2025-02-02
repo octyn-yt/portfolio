@@ -13,8 +13,8 @@ document.addEventListener("mousemove", (e) => {
 const hoverElements = document.querySelectorAll("a, button");
 hoverElements.forEach((el) => {
     el.addEventListener("mouseover", () => {
-        cursor.style.width = "30px"; // Increase size on hover
-        cursor.style.height = "30px";
+        cursor.style.width = "40px"; // Increase size on hover
+        cursor.style.height = "40px";
     });
     el.addEventListener("mouseout", () => {
         cursor.style.width = "20px"; // Reset to default size
@@ -72,4 +72,25 @@ window.addEventListener("click", (event) => {
     if (event.target === modal) {
         modal.style.display = "none";
     }
+});
+
+// Show sections with fade-in animation as user scrolls
+const sections = document.querySelectorAll('section');
+
+const options = {
+    root: null,
+    threshold: 0.3
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
 });
