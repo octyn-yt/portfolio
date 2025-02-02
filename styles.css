@@ -21,11 +21,80 @@ body.dark-mode {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #1e2a47;  /* Dark blue background */
     color: #fff;
     z-index: 100;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #d1d1d1;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #007BFF;  /* Light blue on hover */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: #1e2a47;  /* Dark blue background */
+    color: #fff;
+}
+
+header.dark-mode {
+    background: #283e70;  /* Slightly lighter blue for dark mode */
+}
+
+header img.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Theme Toggle Button */
+button.theme-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Payment Section */
+#payment-methods {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.payment-method {
+    margin: 20px 0;
+}
+
+.payment-method h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.payment-method code {
+    font-family: 'Courier New', monospace;
+    background-color: #e5e5e5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.payment-method p {
+    font-size: 1rem;
 }
 
 /* Jailbreak Section */
@@ -52,7 +121,32 @@ body.dark-mode {
 }
 
 #jailbreak ul li strong {
-    color: #007BFF;
+    color: #007BFF; /* Light blue text for important items */
+}
+
+/* Social Media Section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons i {
+    color: #1e2a47; /* Dark blue icon color */
+    font-size: 2rem;
+}
+
+.social-icons a:hover i {
+    color: #007BFF;  /* Light blue on hover */
 }
 
 /* Discord Embed Button */
@@ -71,11 +165,50 @@ body.dark-mode {
     background-color: #5b6eae;
 }
 
-/* Other Styles */
+/* Version Number */
 .version-number {
     position: fixed;
     bottom: 10px;
     right: 10px;
     font-size: 0.8rem;
     color: #888;
+}
+
+/* Section Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* For dark mode, customize specific elements that need a darker look */
+body.dark-mode section {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav {
+    background-color: #1e2a47; /* Dark blue */
+}
+
+body.dark-mode nav ul li a {
+    color: #ddd;
+}
+
+body.dark-mode header {
+    color: #ddd;
+}
+
+/* Dark Mode Button */
+button.theme-toggle.dark-mode {
+    color: #f7f7f7;
 }
