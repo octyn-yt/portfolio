@@ -59,14 +59,17 @@ header img.profile-pic {
     margin-top: 20px;
 }
 
-/* Theme Toggle Button */
+/* Dark Mode Toggle Button */
 button.theme-toggle {
     background-color: transparent;
     border: none;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    margin-top: 20px;
+    position: fixed;  /* Fix it to the top left */
+    top: 20px;
+    left: 20px;
+    z-index: 200;
 }
 
 /* Payment Section */
