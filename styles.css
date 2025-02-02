@@ -5,7 +5,6 @@ body {
     color: #333;
     line-height: 1.6;
     margin: 0;
-    padding-top: 80px;  /* Adjust for space for the fixed navbar */
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -16,40 +15,12 @@ body.dark-mode {
     color: #ddd;
 }
 
-/* Navbar (Fixed to Top) */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #1e2a47;  /* Dark blue background */
-    color: #fff;
-    z-index: 100;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.navbar a {
-    color: #d1d1d1;
-    text-decoration: none;
-    padding: 5px 10px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-    color: #007BFF;  /* Light blue on hover */
-}
-
-/* Header */
+/* Header Section */
 header {
     text-align: center;
     padding: 80px 20px;
-    background: #1e2a47;  /* Dark blue background */
+    background: #222;
     color: #fff;
-}
-
-header.dark-mode {
-    background: #283e70;  /* Slightly lighter blue for dark mode */
 }
 
 header img.profile-pic {
@@ -59,159 +30,132 @@ header img.profile-pic {
     margin-top: 20px;
 }
 
-/* Dark Mode Toggle Button */
-button.theme-toggle {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: fixed;  /* Fix it to the top left */
-    top: 20px;
-    left: 20px;
-    z-index: 200;
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    z-index: 1000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Payment Section */
-#payment-methods {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.payment-method {
-    margin: 20px 0;
-}
-
-.payment-method h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.payment-method code {
-    font-family: 'Courier New', monospace;
-    background-color: #e5e5e5;
-    padding: 5px 10px;
-    border-radius: 5px;
-    word-wrap: break-word;
-}
-
-.payment-method p {
-    font-size: 1rem;
-}
-
-/* Jailbreak Section */
-#jailbreak {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#jailbreak h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#jailbreak ul {
-    list-style-type: none;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
     padding: 0;
-    margin: 20px 0;
 }
 
-#jailbreak ul li {
-    font-size: 1.2rem;
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #ddd;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #1E90FF; /* Blue hover effect */
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #ddd;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+/* Mobile Styling */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .navbar.open ul {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Projects Section Styling */
+#projects {
+    padding: 40px 20px;
+    background-color: #f4f7fa;
     color: #333;
 }
 
-#jailbreak ul li strong {
-    color: #007BFF; /* Light blue text for important items */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 
-/* Social Media Section */
-#contact {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
+.project-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.social-icons a {
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-.social-icons a:hover {
-    transform: scale(1.1);
+.project-content h3 {
+    color: #1E90FF;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-.social-icons i {
-    color: #1e2a47; /* Dark blue icon color */
-    font-size: 2rem;
-}
-
-.social-icons a:hover i {
-    color: #007BFF;  /* Light blue on hover */
-}
-
-/* Discord Embed Button */
-.discord-btn {
-    background-color: #7289da;
-    color: white;
-    padding: 10px 20px;
+.project-content p {
     font-size: 1rem;
-    border-radius: 5px;
+    color: #555;
+}
+
+.project-item a {
     text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
 }
 
-.discord-btn:hover {
-    background-color: #5b6eae;
-}
-
-/* Version Number */
+/* Version Number (Bottom Right) */
 .version-number {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    font-size: 0.8rem;
     color: #888;
-}
-
-/* Section Fade-In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section {
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-/* For dark mode, customize specific elements that need a darker look */
-body.dark-mode section {
-    background-color: #1e1e1e;
-}
-
-body.dark-mode nav {
-    background-color: #1e2a47; /* Dark blue */
-}
-
-body.dark-mode nav ul li a {
-    color: #ddd;
-}
-
-body.dark-mode header {
-    color: #ddd;
-}
-
-/* Dark Mode Button */
-button.theme-toggle.dark-mode {
-    color: #f7f7f7;
+    font-size: 0.9rem;
 }
