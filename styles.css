@@ -336,9 +336,23 @@ header img.profile-pic {
         align-items: center;
     }
 
-    .burger-menu {
+    #burger-menu {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#burger-menu i {
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    #burger-menu {
         display: block;
     }
+}
+
 
     .navbar.open ul {
         display: flex;
