@@ -336,6 +336,18 @@ header img.profile-pic {
         align-items: center;
     }
 
+    .burger-menu {
+        display: block;
+    }
+
+    .navbar.open ul {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
     .social-icons {
         flex-direction: column;
         gap: 10px;
