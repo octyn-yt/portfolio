@@ -123,19 +123,16 @@ header img.profile-pic {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* PayPal Button Styling */
-.paypal-btn {
-    background-color: #0070ba;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
+/* PayPal Link Styling */
+.payment-method a {
+    color: #0070ba;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.paypal-btn:hover {
-    background-color: #00609d;
+.payment-method a:hover {
+    color: #00609d;
 }
 
 /* Projects Section */
