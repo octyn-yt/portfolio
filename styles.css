@@ -131,11 +131,14 @@ h2 {
 .project-list,
 .jailbreak-devices,
 .payment-icons {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Items evenly spaced horizontally */
     gap: 20px;
     padding: 20px;
     width: 100%;
+    justify-content: center;
     justify-items: center;
     align-items: center;
 }
@@ -150,7 +153,7 @@ h2 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
     height: 300px; /* Fixed height for all items */
@@ -239,6 +242,15 @@ body.dark-mode {
     color: #ddd;
 }
 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ddd;
+}
+
 header {
     background-color: #222;
 }
@@ -284,8 +296,8 @@ header img.profile-pic {
 /* Theme Toggle Button */
 .theme-toggle {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 12px;
+    right: 30px;
     background-color: transparent;
     color: #fff;
     border: none;
