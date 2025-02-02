@@ -7,6 +7,10 @@ body {
     margin: 0;
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Dark Mode */
@@ -20,13 +24,13 @@ body.dark-mode {
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centers the navbar */
+    transform: translateX(-50%);
     width: 100%;
     background-color: #222;
     z-index: 1000;
     padding: 10px 0;
     display: flex;
-    justify-content: center; /* Centers the navbar items */
+    justify-content: center;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -59,158 +63,127 @@ body.dark-mode {
     color: #1E90FF; /* Blue hover effect */
 }
 
-/* Burger Menu */
-.burger-menu {
-    display: none;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: #ddd;
-}
-
-/* Mobile Styling */
-@media screen and (max-width: 768px) {
-    .navbar ul {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .burger-menu {
-        display: block;
-    }
-
-    .navbar.open ul {
-        display: flex;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Jailbreak and Donation Grid */
-.jailbreak-devices, .payment-icons {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.device-item, .payment-method {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1; /* Ensures square aspect ratio */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.device-item:hover, .payment-method:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-}
-
-.device-item h3 {
-    color: #1E90FF; /* Blue accent for device title */
-    font-size: 1.1rem;
-}
-
-.device-item p {
-    color: #555;
-    font-size: 1rem;
-}
-
-/* PayPal Button Styling */
-.paypal-btn {
-    background-color: #0070ba;
+/* Profile Section */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: #222;
     color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
 }
 
-.paypal-btn:hover {
-    background-color: #00609d;
+header img.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
 }
 
-/* Projects Section */
-#projects {
-    padding: 40px 20px;
-    background-color: #f4f7fa;
-    color: #333;
+header h1 {
+    margin: 20px 0;
 }
 
-/* Dark Mode Styling for Projects Section */
-body.dark-mode #projects {
-    background-color: #1c1c1c;
-}
-
-.project-list {
+/* Grid Section */
+.jailbreak-devices, .payment-icons, .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
 }
 
-.project-item {
+/* Grid Item */
+.device-item, .payment-method, .project-item {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 1; /* Ensures square aspect ratio */
+    text-align: center;
+    overflow: hidden;
+    aspect-ratio: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.project-item:hover {
+/* Hover Effect - Blue Shadow */
+.device-item:hover, .payment-method:hover, .project-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 12px rgba(30, 144, 255, 0.6);
 }
 
-.project-content h3 {
+/* Title in Grid Items */
+.device-item h3, .payment-method h3, .project-content h3 {
     color: #1E90FF;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
-.project-content p {
-    font-size: 1rem;
-    color: #555;
+/* Icons for Donation and Jailbreak */
+.device-item i, .payment-method i, .project-item i {
+    font-size: 2rem;
+    color: #1E90FF;
+    margin-bottom: 10px;
 }
 
-.project-item a {
-    text-decoration: none;
+/* GitHub Icon for Projects (Changes Color in Dark Mode) */
+.project-item .github-icon {
+    font-size: 2rem;
+    color: #1E90FF;
+    transition: color 0.3s ease;
 }
 
-/* Dark Mode Toggle Button */
+body.dark-mode .project-item .github-icon {
+    color: #ddd;
+}
+
+/* Unlocked Lock Icon for Jailbreak (Changes Color in Dark Mode) */
+.device-item .lock-icon {
+    font-size: 2rem;
+    color: #1E90FF;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .device-item .lock-icon {
+    color: #ddd;
+}
+
+/* Wallet Icon for Donations */
+.payment-method .wallet-icon {
+    font-size: 2rem;
+    color: #1E90FF;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .payment-method .wallet-icon {
+    color: #ddd;
+}
+
+/* Dark Mode Button */
 .theme-toggle {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: transparent; /* Make the background transparent */
-    color: #fff; /* Ensure the icon color remains white */
+    background-color: transparent;
+    color: #fff;
     border: none;
-    padding: 10px; /* Adjust padding to make the icon centered */
+    padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.5rem;
-    z-index: 9999;
-    transition: background-color 0.3s ease; /* Smooth transition for background on hover */
 }
 
 /* Dark Mode Button Hover */
 .theme-toggle:hover {
-    background-color: rgba(0, 0, 0, 0.2); /* Light darkening effect on hover */
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Version Number (Bottom Right) */
+/* Version Number */
 .version-number {
     position: fixed;
     bottom: 10px;
