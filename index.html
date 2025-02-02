@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Dark Mode Toggle Button (Moved to Top Left) -->
-    <button id="theme-toggle" class="theme-toggle">
-        <i class="fas fa-moon"></i> <!-- Icon for Dark Mode -->
-    </button>
-
     <!-- Navigation Section (Fixed to Top) -->
     <nav class="navbar">
         <!-- Burger Menu Icon -->
@@ -98,14 +93,26 @@
     <section id="jailbreak">
         <h2>My Jailbreak Devices and Other</h2>
         <p>Here are some of my jailbreak devices, mods, and hacks that I use or have used:</p>
-        <ul>
-            <li><strong>iPhone ?s</strong> - ?</li>
-            <li><strong>iPad 7th gen</strong> ?</li>
-            <li><strong>iPhone SE 1st gen</strong> ?</li>
-            <li><strong>Used to: iPhone XR</strong> 15.4.1 before dleovl bootlooped me</li>
-            <li><strong>PS4 Slim</strong> Goldhen - Pi-Pwn 11.00</li>
-            <li><strong>Nintendo Switch 1st gen</strong> Linux, Android, Atmosphere ?</li>
-        </ul>
+        <div class="jailbreak-devices">
+            <div class="device-item">
+                <strong>iPhone ?s</strong> - ?
+            </div>
+            <div class="device-item">
+                <strong>iPad 7th gen</strong> - ?
+            </div>
+            <div class="device-item">
+                <strong>iPhone SE 1st gen</strong> - ?
+            </div>
+            <div class="device-item">
+                <strong>Used to: iPhone XR</strong> - 15.4.1 before dleovl bootlooped me
+            </div>
+            <div class="device-item">
+                <strong>PS4 Slim</strong> - Goldhen - Pi-Pwn 11.00
+            </div>
+            <div class="device-item">
+                <strong>Nintendo Switch 1st gen</strong> - Linux, Android, Atmosphere ?
+            </div>
+        </div>
         <p>Feel free to contact me for more details on jailbreaking or device mods!</p>
     </section>
 
@@ -129,6 +136,12 @@
                 <h3>Monero</h3>
                 <p>Monero Address: <code>47d9U68pwE6Axi1xEXAZJgX1HZLGv25hKZ2REepCbC3Y7np97V6s1VU6sM1c4jCAJbYY1GpTuxbDrRwjeMAxH8zuLkNEoVr</code></p>
             </div>
+            <div class="payment-method">
+                <h3>PayPal</h3>
+                <a href="https://www.paypal.me/YourPayPalLink" target="_blank">
+                    <button class="paypal-btn">Donate via PayPal</button>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -141,6 +154,11 @@
             <a href="https://discord.com/users/706166881090011198" target="_blank"><i class="fab fa-discord"></i></a>
         </div>
     </section>
+
+    <!-- Dark Mode Toggle Button (Moved to Bottom) -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i> <!-- Icon for Dark Mode -->
+    </button>
 
     <!-- Version Number (Bottom Right) -->
     <div class="version-number">
