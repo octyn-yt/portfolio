@@ -5,6 +5,7 @@ body {
     color: #333;
     line-height: 1.6;
     margin: 0;
+    padding-top: 80px;  /* Adjust for space for the navbar */
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -34,17 +35,51 @@ header img.profile-pic {
 }
 
 button.theme-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
     background-color: transparent;
     border: none;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    margin-top: 20px;
+    z-index: 101;
 }
 
-/* Dark Mode Toggle Button Style */
-button.theme-toggle.dark-mode {
-    color: #f7f7f7;
+/* Navbar (Fixed to Top) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 100;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
 
 /* Payment Section */
@@ -75,19 +110,19 @@ button.theme-toggle.dark-mode {
     font-size: 1rem;
 }
 
-/* Payment Icons */
-.payment-icons a {
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+/* Dark Mode Payment Section */
+body.dark-mode #payment-methods {
+    background-color: #1e1e1e;
 }
 
-.payment-icons a:hover {
-    transform: scale(1.1);
+body.dark-mode .payment-method h3,
+body.dark-mode .payment-method p {
+    color: #ddd;
 }
 
-.payment-icons img {
-    width: 50px;
-    height: 50px;
+body.dark-mode .payment-method code {
+    background-color: #333;
+    color: #ddd;
 }
 
 /* Project Section - Clean Boxes */
@@ -131,21 +166,13 @@ button.theme-toggle.dark-mode {
     color: #666;
 }
 
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section {
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
+/* Version Number (Bottom Right) */
+.version-number {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: #888;
 }
 
 /* Dark Mode Customizations */
