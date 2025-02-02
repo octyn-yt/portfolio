@@ -1,43 +1,23 @@
-// Dark Mode Toggle Logic
-const themeToggleButton = document.getElementById('theme-toggle');
-
-// Check if dark mode was previously enabled
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme === 'dark') {
+// Check for dark mode in localStorage and apply it
+if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark-mode');
-    themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
-} else {
-    document.body.classList.remove('dark-mode');
-    themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
 }
 
-// Toggle dark mode
+// Dark Mode Toggle
+const themeToggleButton = document.getElementById('theme-toggle');
 themeToggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    
-    // Toggle button icon
+
+    // Save the user's dark mode preference
     if (document.body.classList.contains('dark-mode')) {
-        themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
-        localStorage.setItem('theme', 'dark');
+        localStorage.setItem('darkMode', 'enabled');
     } else {
-        themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
-        localStorage.setItem('theme', 'light');
+        localStorage.setItem('darkMode', 'disabled');
     }
 });
 
-// Copy to clipboard functionality for crypto wallet addresses
-const walletAddresses = document.querySelectorAll('.payment-method code');
-
-walletAddresses.forEach((address) => {
-    address.addEventListener('click', () => {
-        const addressText = address.textContent || address.innerText;
-        navigator.clipboard.writeText(addressText)
-            .then(() => {
-                alert('Address copied to clipboard!');
-            })
-            .catch((err) => {
-                console.error('Failed to copy: ', err);
-            });
-    });
+// Burger Menu Toggle
+document.getElementById('burger-menu').addEventListener('click', function() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('open');
 });
