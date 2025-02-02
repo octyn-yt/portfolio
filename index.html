@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Dark Mode Toggle Button (Moved to Top Left) -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i> <!-- Icon for Dark Mode -->
+    </button>
+
     <!-- Navigation Section (Fixed to Top) -->
     <nav class="navbar">
-        <!-- Burger Menu Icon -->
-        <div class="burger-menu" id="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-        
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -43,15 +43,9 @@
         <h2>Experience</h2>
         <div class="experience-item">
             <h3>Moderator at Alien Tag</h3>
-            <p>Helped create a safe community and host game nights. https://discord.gg/AlienTag</p>
-            <a href="https://discord.com/invite/gdV2DynNvD" target="_blank">
-                <button class="discord-btn">
-                    <i class="fab fa-discord"></i> Join the Discord
-                </button>
-            </a>
+            <p>Helped create a safe community and host game nights. <a href="https://discord.gg/AlienTag" target="_blank">Join the discord</a></p>
         </div>
     </section>
-
 
     <!-- Projects Section -->
     <section id="projects">
@@ -77,7 +71,7 @@
                 <a href="https://github.com/octyn-yt/playgtag" target="_blank">
                     <div class="project-content">
                         <h3>Play GorillaTag</h3>
-                        <p>A mod for gorilla tag that just lets you play the game. Thats it.</p>
+                        <p>A mod for gorilla tag that just lets you play the game. That's it.</p>
                     </div>
                 </a>
             </div>
@@ -96,8 +90,7 @@
     <section id="jailbreak">
         <h2>My Jailbreak Devices and Other</h2>
         <p>Here are some of my jailbreak devices, mods, and hacks that I use or have used:</p>
-        <div class="jailbreak-devices">
-            <div class="device-item">
+        <div class="device-item">
                 <strong>iPhone ?s</strong> - ?
             </div>
             <div class="device-item">
@@ -107,7 +100,7 @@
                 <strong>iPhone SE 1st gen</strong> - ?
             </div>
             <div class="device-item">
-                <strong>Used to: iPhone XR</strong> - 15.4.1 before dleovl bootlooped me
+                <strong>Used to: iPhone XR</strong> - 15.4.1 (dleovl bootlooped me so im now on 17.4.1)
             </div>
             <div class="device-item">
                 <strong>PS4 Slim</strong> - Goldhen - Pi-Pwn 11.00
@@ -115,7 +108,6 @@
             <div class="device-item">
                 <strong>Nintendo Switch 1st gen</strong> - Linux, Android, Atmosphere ?
             </div>
-        </div>
         <p>Feel free to contact me for more details on jailbreaking or device mods!</p>
     </section>
 
@@ -123,27 +115,21 @@
     <section id="payment-methods">
         <h2>Support My Work</h2>
         <div class="payment-icons">
-            <div class="payment-method">
+            <div class="payment-method" onclick="window.location.href='bitcoin-link';">
                 <h3>Bitcoin</h3>
                 <p>BTC Address: <code>bc1qqzdjvdxf3hekt5sppf0edp4e6apys04ywxynlv</code></p>
             </div>
-            <div class="payment-method">
+            <div class="payment-method" onclick="window.location.href='ethereum-link';">
                 <h3>Ethereum</h3>
                 <p>ETH Address: <code>0x8705791D94f5243661Ce2148F85119de094Fb3Fb</code></p>
             </div>
-            <div class="payment-method">
+            <div class="payment-method" onclick="window.location.href='litecoin-link';">
                 <h3>Litecoin</h3>
                 <p>LTC Address: <code>LeYDJUndGAoruNM474nXG348n1GANQbaHM</code></p>
             </div>
-            <div class="payment-method">
+            <div class="payment-method" onclick="window.location.href='monero-link';">
                 <h3>Monero</h3>
                 <p>Monero Address: <code>47d9U68pwE6Axi1xEXAZJgX1HZLGv25hKZ2REepCbC3Y7np97V6s1VU6sM1c4jCAJbYY1GpTuxbDrRwjeMAxH8zuLkNEoVr</code></p>
-            </div>
-            <div class="payment-method">
-                <h3>PayPal</h3>
-                <a href="https://www.paypal.me/YourPayPalLink" target="_blank">
-                    <button class="paypal-btn">Donate via PayPal</button>
-                </a>
             </div>
         </div>
     </section>
@@ -157,11 +143,6 @@
             <a href="https://discord.com/users/706166881090011198" target="_blank"><i class="fab fa-discord"></i></a>
         </div>
     </section>
-
-    <!-- Dark Mode Toggle Button (Moved to Bottom) -->
-    <button id="theme-toggle" class="theme-toggle">
-        <i class="fas fa-moon"></i> <!-- Icon for Dark Mode -->
-    </button>
 
     <!-- Version Number (Bottom Right) -->
     <div class="version-number">
