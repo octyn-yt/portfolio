@@ -1,11 +1,4 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
+/* General Styles (Light Mode by Default) */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f5;
@@ -14,9 +7,15 @@ body {
     margin: 0;
     overflow-x: hidden;
     cursor: url('https://cdn.jsdelivr.net/gh/Chandrakanta1408/Cursors/cursor2.png'), auto;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header Section */
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ddd;
+}
+
 header {
     text-align: center;
     padding: 80px 20px;
@@ -24,14 +23,8 @@ header {
     color: #fff;
 }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+header.dark-mode {
+    background: #333;
 }
 
 header img.profile-pic {
@@ -41,99 +34,18 @@ header img.profile-pic {
     margin-top: 20px;
 }
 
-/* Navigation Section */
-nav {
-    background-color: #222;
-    padding: 15px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
+button.theme-toggle {
+    background-color: transparent;
+    border: none;
     color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-/* Section Styles */
-section {
-    padding: 60px 20px;
-    margin-top: 40px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-/* Section Titles */
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* Experience Section */
-.experience-item {
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-/* Project Section */
-.project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    justify-content: center;
-}
-
-.project-item {
-    display: block;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    text-decoration: none;
-}
-
-.project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.project-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.project-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.project-item p {
-    font-size: 1rem;
-    color: #555;
-    opacity: 0.8;
-    margin-bottom: 10px;
-}
-
-.project-item:hover h3 {
-    color: #00aaff;
+/* Dark Mode Toggle Button Style */
+button.theme-toggle.dark-mode {
+    color: #f7f7f7;
 }
 
 /* Payment Section */
@@ -143,6 +55,28 @@ section h2 {
     text-align: center;
 }
 
+.payment-method {
+    margin: 20px 0;
+}
+
+.payment-method h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.payment-method code {
+    font-family: 'Courier New', monospace;
+    background-color: #e5e5e5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.payment-method p {
+    font-size: 1rem;
+}
+
+/* Payment Icons */
 .payment-icons a {
     margin: 0 10px;
     transition: transform 0.3s ease;
@@ -155,33 +89,4 @@ section h2 {
 .payment-icons img {
     width: 50px;
     height: 50px;
-}
-
-/* Social Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icons a {
-    color: #333;
-    font-size: 2rem;
-}
-
-/* Fade In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section {
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
 }
