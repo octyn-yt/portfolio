@@ -1,23 +1,43 @@
-// Check for dark mode in localStorage and apply it
-if (localStorage.getItem('darkMode') === 'enabled') {
+// Dark Mode Toggle Logic
+const themeToggleButton = document.getElementById('theme-toggle');
+
+// Check if dark mode was previously enabled
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme === 'dark') {
     document.body.classList.add('dark-mode');
+    themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+} else {
+    document.body.classList.remove('dark-mode');
+    themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
 }
 
-// Dark Mode Toggle
-const themeToggleButton = document.getElementById('theme-toggle');
+// Toggle dark mode
 themeToggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-
-    // Save the user's dark mode preference
+    
+    // Toggle button icon
     if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
+        themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
     } else {
-        localStorage.setItem('darkMode', 'disabled');
+        themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
     }
 });
 
-// Burger Menu Toggle
-document.getElementById('burger-menu').addEventListener('click', function() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('open');
+// Copy to clipboard functionality for crypto wallet addresses
+const walletAddresses = document.querySelectorAll('.payment-method code');
+
+walletAddresses.forEach((address) => {
+    address.addEventListener('click', () => {
+        const addressText = address.textContent || address.innerText;
+        navigator.clipboard.writeText(addressText)
+            .then(() => {
+                alert('Address copied to clipboard!');
+            })
+            .catch((err) => {
+                console.error('Failed to copy: ', err);
+            });
+    });
 });
