@@ -3,65 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Octyn-YT | Bio & Projects</title>
+    <title>Octyn-yt's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <h1>Octyn-YT</h1>
-            <p>Developer | YouTuber | Creator</p>
-        </div>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Octyn-yt</h1>
+        <p>Software Developer & Open Source Enthusiast</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#donate">Donate</a></li>
-            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            Hi, I'm Octyn-YT! I'm a developer and content creator who loves creating cool projects and tutorials. 
-            I specialize in web development, scripting, and gaming content.
-        </p>
+        <p>I'm a passionate software developer, always exploring new technologies and building useful tools!</p>
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
+        <h2>My Projects</h2>
         <div class="project-list">
             <div class="project-item" data-project-id="1">
-                <h3>Project Name 1</h3>
-                <p>A brief description of Project 1. <button class="view-details">View Details</button></p>
+                <h3>Project 1</h3>
+                <p>Short description of Project 1.</p>
+                <button class="view-details">View Details</button>
             </div>
             <div class="project-item" data-project-id="2">
-                <h3>Project Name 2</h3>
-                <p>A brief description of Project 2. <button class="view-details">View Details</button></p>
+                <h3>Project 2</h3>
+                <p>Short description of Project 2.</p>
+                <button class="view-details">View Details</button>
             </div>
-            <!-- Add more projects here -->
         </div>
     </section>
 
-    <section id="donate">
-        <h2>Support My Work</h2>
-        <p>If you enjoy my projects and would like to support me, consider donating!</p>
-        <p><a href="https://www.paypal.com/donate?hosted_button_id=XXXXX" target="_blank">Donate via PayPal</a></p>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="social-icons">
+            <a href="https://github.com/octyn-yt" target="_blank" class="github-icon"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/octyn_yt" target="_blank" class="twitter-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/octyn-yt" target="_blank" class="linkedin-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
     </section>
 
-    <section id="experience">
-        <h2>Previous Work Experience</h2>
-        <ul>
-            <li><strong>Job Title 1</strong> - Company Name (Year - Year)</li>
-            <li><strong>Job Title 2</strong> - Company Name (Year - Year)</li>
-            <li><strong>Freelance Developer</strong> - Various Clients (Year - Present)</li>
-        </ul>
-    </section>
-
-    <!-- Modal for Project Details -->
+    <!-- Modal -->
     <div id="project-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -70,11 +62,5 @@
             <a id="modal-link" href="#" target="_blank">View Project</a>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Octyn-YT. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
