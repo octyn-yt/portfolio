@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Dark Mode Toggle Button (Moved to Top Left) -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i> <!-- Icon for Dark Mode -->
+    </button>
+
     <!-- Header Section -->
     <header id="home">
         <img src="profile.jpg" alt="Octyn-yt's Profile Picture" class="profile-pic">
         <h1>Octyn-yt</h1>
         <p>A passionate developer with a love for open-source projects</p>
-        <!-- Dark Mode Toggle Button -->
-        <button id="theme-toggle" class="theme-toggle">
-            <i class="fas fa-moon"></i> <!-- Icon for Dark Mode -->
-        </button>
     </header>
 
-    <!-- Navigation Section -->
-    <nav>
+    <!-- Navigation Section (Fixed to Top) -->
+    <nav class="navbar">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -41,7 +42,7 @@
         <h2>Experience</h2>
         <div class="experience-item">
             <h3>Moderator at Alien Tag</h3>
-            <p>Helped create a safe community and host game nights. https://discord.gg/AlienTag</p>
+            <p>Helped create a safe community and host game nights. https://discord.com/invite/gdV2DynNvD</p>
         </div>
     </section>
 
@@ -116,5 +117,10 @@
             <a href="https://discord.com/users/706166881090011198" target="_blank"><i class="fab fa-discord"></i></a>
         </div>
     </section>
+
+    <!-- Version Number (Bottom Right) -->
+    <div class="version-number">
+        <p>v1.0.0</p>
+    </div>
 </body>
 </html>
