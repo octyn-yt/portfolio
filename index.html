@@ -9,58 +9,81 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+    <!-- Header Section -->
+    <header id="home">
+        <img src="profile.jpg" alt="Octyn-yt's Profile Picture" class="profile-pic">
         <h1>Octyn-yt</h1>
-        <p>Software Developer & Open Source Enthusiast</p>
+        <p>A passionate developer with a love for open-source projects</p>
     </header>
 
+    <!-- Navigation Section -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm a passionate software developer, always exploring new technologies and building useful tools!</p>
+        <p>I'm a developer with experience in JavaScript, Python, and web development. I contribute to open-source projects and enjoy building innovative tools that solve real-world problems.</p>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Software Engineer at TechCorp</h3>
+            <p>Developed web applications, worked with a cross-functional team, and improved performance by 30%.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Open-Source Contributor</h3>
+            <p>Contributed to .</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
+        <h2>Projects</h2>
         <div class="project-list">
-            <div class="project-item" data-project-id="1">
+            <div class="project-item">
                 <h3>Project 1</h3>
-                <p>Short description of Project 1.</p>
-                <button class="view-details">View Details</button>
+                <p>A cool project that does something amazing. <a href="https://github.com/octyn-yt/project1" target="_blank">View on GitHub</a></p>
             </div>
-            <div class="project-item" data-project-id="2">
+            <div class="project-item">
                 <h3>Project 2</h3>
-                <p>Short description of Project 2.</p>
-                <button class="view-details">View Details</button>
+                <p>An innovative project that solves real problems. <a href="https://github.com/octyn-yt/project2" target="_blank">View on GitHub</a></p>
             </div>
         </div>
     </section>
 
+    <!-- Payment Methods Section -->
+    <section id="payment-methods">
+        <h2>Support My Work</h2>
+        <div class="payment-icons">
+            <a href="https://www.paypal.me/octyn" target="_blank">
+                <img src="paypal-logo.png" alt="PayPal Donation">
+            </a>
+            <a href="bitcoin-address-here" target="_blank">
+                <img src="bitcoin-logo.png" alt="Bitcoin Donation">
+            </a>
+            <a href="ethereum-address-here" target="_blank">
+                <img src="ethereum-logo.png" alt="Ethereum Donation">
+            </a>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="social-icons">
-            <a href="https://github.com/octyn-yt" target="_blank" class="github-icon"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/octyn_yt" target="_blank" class="twitter-icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com/in/octyn-yt" target="_blank" class="linkedin-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/octyn-yt" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/octyn_yt" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/octyn-yt" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </section>
-
-    <!-- Modal -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Project Details</h2>
-            <p id="modal-description"></p>
-            <a id="modal-link" href="#" target="_blank">View Project</a>
-        </div>
-    </div>
 </body>
 </html>
