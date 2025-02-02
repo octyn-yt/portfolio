@@ -79,10 +79,12 @@ h2 {
 /* Grid Layout for Perfect Squares */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensure grid items are equal size */
     gap: 20px;
     padding: 20px;
+    width: 100%;
     justify-items: center;
+    align-items: center;
 }
 
 .grid-item {
@@ -136,8 +138,9 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Same size grid items */
     gap: 20px;
     padding: 20px;
-    justify-items: center;
     width: 100%;
+    justify-items: center;
+    align-items: center;
 }
 
 .project-item,
