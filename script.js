@@ -1,30 +1,29 @@
-// Smooth Scrolling for navigation
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Theme Toggle Logic
+const themeToggleButton = document.getElementById('theme-toggle');
 
-// Show sections with fade-in animation on scroll
-const sections = document.querySelectorAll('section');
+// Check if dark mode was previously enabled
+const currentTheme = localStorage.getItem('theme');
 
-const options = {
-    root: null,
-    threshold: 0.3
-};
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggleButton.classList.add('dark-mode');
+    themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';  // Change to Sun icon
+} else {
+    document.body.classList.remove('dark-mode');
+    themeToggleButton.classList.remove('dark-mode');
+    themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';  // Keep Moon icon
+}
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            observer.unobserve(entry.target);
-        }
-    });
-}, options);
-
-sections.forEach(section => {
-    observer.observe(section);
+// Add event listener to toggle theme
+themeToggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    // Toggle theme button icon
+    if (document.body.classList.contains('dark-mode')) {
+        themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');  // Save theme to localStorage
+    } else {
+        themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem('theme', 'light');  // Save theme to localStorage
+    }
 });
