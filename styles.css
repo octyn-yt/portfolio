@@ -200,3 +200,43 @@ header img.profile-pic {
     color: #888;
     font-size: 0.9rem;
 }
+
+/* Discord Button Styling */
+.discord-btn {
+    background-color: #7289da; /* Discord color */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.discord-btn:hover {
+    background-color: #5b6eae; /* Darker shade for hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+.discord-btn:active {
+    transform: translateY(0); /* Remove lift effect on click */
+}
+
+.discord-btn i {
+    margin-right: 10px;
+}
+
+/* Responsive Button Styling */
+@media screen and (max-width: 768px) {
+    .discord-btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 1.1rem;
+    }
+}
+
