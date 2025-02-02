@@ -1,4 +1,4 @@
-/* General Styles (Light Mode by Default) */
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f5;
@@ -9,13 +9,12 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode */
 body.dark-mode {
     background-color: #121212;
     color: #ddd;
 }
 
-/* Header Section */
 header {
     text-align: center;
     padding: 80px 20px;
@@ -40,7 +39,7 @@ header img.profile-pic {
     z-index: 1000;
     padding: 10px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -108,7 +107,7 @@ header img.profile-pic {
     }
 }
 
-/* Projects Section Styling */
+/* Projects Section */
 #projects {
     padding: 40px 20px;
     background-color: #f4f7fa;
@@ -116,9 +115,8 @@ header img.profile-pic {
 }
 
 .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -127,7 +125,6 @@ header img.profile-pic {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
