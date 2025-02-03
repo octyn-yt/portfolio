@@ -130,7 +130,8 @@ h2 {
 /* Project Section */
 .project-list,
 .jailbreak-devices,
-.payment-icons {
+.payment-icons,
+.customers-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -145,7 +146,8 @@ h2 {
 
 .project-item,
 .device-item,
-.payment-method {
+.payment-method,
+.customer-item {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 15px;
@@ -162,14 +164,16 @@ h2 {
 
 .project-item:hover,
 .device-item:hover,
-.payment-method:hover {
+.payment-method:hover,
+.customer-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(30, 144, 255, 0.3); /* Blue hover shadow */
 }
 
 .project-item i,
 .device-item i,
-.payment-method i {
+.payment-method i,
+.customer-item i {
     font-size: 3rem;
     color: #1E90FF;
     margin-bottom: 10px;
@@ -177,7 +181,8 @@ h2 {
 
 .project-item h3,
 .device-item h3,
-.payment-method h3 {
+.payment-method h3,
+.customer-item h3 {
     color: #333;
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -185,14 +190,16 @@ h2 {
 
 .project-item p,
 .device-item p,
-.payment-method p {
+.payment-method p,
+.customer-item p {
     font-size: 1rem;
     color: #555;
 }
 
 .project-item a,
 .device-item a,
-.payment-method a {
+.payment-method a,
+.customer-item a {
     text-decoration: none;
 }
 
